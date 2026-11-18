@@ -9,7 +9,7 @@ export default defineConfig({
       '/api': 'http://localhost:5122',
       '/thumbnail': 'http://localhost:5122',
       '/process': 'http://localhost:5122',
-      '/videos': 'http://localhost:5122',
+      '^/videos/': 'http://localhost:5122',
       '/results': 'http://localhost:5122',
     },
   },
