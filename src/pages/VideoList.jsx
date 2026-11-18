@@ -19,8 +19,9 @@ export default function VideoList() {
 
   return (
     <main>
-      <h1>Video Chooser</h1>
-      <ul>
+      <h1 className="page-title">Video Chooser</h1>
+      <p className="subtitle">Pick a video to preview and process.</p>
+      <ul className='video-grid'>
         {videos.map(v => (
           <li key={v}>
             <VideoCard filename={v} />

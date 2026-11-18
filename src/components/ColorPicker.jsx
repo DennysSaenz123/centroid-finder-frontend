@@ -1,14 +1,8 @@
-export default function ColorPicker({ value, onChange, disabled }) {
+export default function ColorPicker({ value, onChange }) {
   return (
-    <label className="color-picker">
-      Target color
-      <input
-        type="color"
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        disabled={disabled}
-      />
-      <code>{value}</code>
+    <label>
+      Target Color:
+      <input type="color" value={value} onChange={e => onChange(e.target.value)} />
     </label>
   );
 }
