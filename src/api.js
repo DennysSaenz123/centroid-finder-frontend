@@ -55,5 +55,16 @@ export const getJobStatus = async (jobId) => {
   return request(`/process/${jobId}/status`);
 };
 
+// POST /api/videos (multipart) -> { filename }
+export const uploadVideo = async (file) => {
+  if (USE_MOCK) {
+    await delay(300);
+    return { filename: file.name };
+  }
+  const form = new FormData();
+  form.append('video', file); // must match upload.single('video')
+  return request('/api/videos', { method: 'POST', body: form });
+};
+
 // result is a path like "/results/a.mp4.csv"
 export const resultUrl = (result) => `${BASE}${result}`;
