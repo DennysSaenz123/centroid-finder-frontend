@@ -3,7 +3,7 @@ import { thumbnailUrl } from '../api';
 
 export default function VideoCard({ filename }) {
   return (
-    <Link to={`/preview/${encodeURIComponent(filename)}`}>
+    <Link to={`/preview/${encodeURIComponent(filename)}`} className="video-card">
       <img
         src={thumbnailUrl(filename)}
         alt={`Thumbnail for ${filename}`}

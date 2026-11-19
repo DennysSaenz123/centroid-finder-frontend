@@ -64,6 +64,7 @@ export default function VideoDetail() {
     setJob(null);
     try {
       const { jobId } = await startJob(filename, color, threshold);
+      if (!jobId) throw new Error('Server did not return a job ID');
       setJobId(jobId);
       setJob({ status: 'processing' });
     } catch (e) {
