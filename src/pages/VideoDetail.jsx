@@ -40,6 +40,7 @@ export default function VideoDetail() {
     img.onerror = () => {
       if (!cancelled) setLoaded({ filename, error: 'Could not load thumbnail.' });
     };
+    img.crossOrigin = 'anonymous';
     img.src = thumbnailUrl(filename);
 
     return () => { cancelled = true; };
@@ -113,7 +114,7 @@ export default function VideoDetail() {
           <input
             type="range"
             min="0"
-            max="442"
+            max="441"
             value={threshold}
             onChange={e => setThreshold(Number(e.target.value))}
           />

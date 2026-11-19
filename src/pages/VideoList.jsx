@@ -9,7 +9,10 @@ export default function VideoList() {
 
   useEffect(() => {
     getVideos()
-    .then(setVideos)
+    .then(data => {
+      if (!Array.isArray(data)) throw new Error('Unexpected response from server');
+      setVideos(data);
+    })
     .catch(e => setError(e.message))
     .finally(() => setLoading(false));
   }, []);
