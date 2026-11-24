@@ -1,5 +1,5 @@
 // Port of DistanceImageBinarizer.java
-import { colorDistance } from './colorDistance';
+import { colorDistance } from './colorDistance.js';
 
 // imageData: canvas ImageData (RGBA bytes). Returns int[height][width] of 0/1.
 export function toBinaryArray(imageData, targetColor, threshold) {

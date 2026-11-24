@@ -1,5 +1,5 @@
 // Port of DfsBinaryGroupFinder.java
-import { createGroup, compareGroups } from './group';
+import { createGroup, compareGroups } from './group.js';
 
 function validate(image) {
   if (image == null) throw new TypeError('Input image cannot be null.');

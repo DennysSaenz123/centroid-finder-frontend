@@ -1,11 +1,11 @@
-import { hexStringToInt } from './colorDistance';
-import { toBinaryArray } from './binarizer';
-import { findConnectedGroups } from './groupFinder';
+import { hexStringToInt } from './colorDistance.js';
+import { toBinaryArray } from './binarizer.js';
+import { findConnectedGroups } from './groupFinder.js';
 
-export * from './colorDistance';
-export * from './binarizer';
-export * from './group';
-export * from './groupFinder';
+export * from './colorDistance.js';
+export * from './binarizer.js';
+export * from './group.js';
+export * from './groupFinder.js';
 
 // Runs the whole pipeline. Returns the binary array and the largest group (or null).
 export function analyzeFrame(imageData, hexColor, threshold) {
